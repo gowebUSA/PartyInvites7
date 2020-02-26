@@ -1,18 +1,23 @@
-﻿@model PartyInvites.Models.GuestResponse
+﻿@model PartyInvites.Models.GuestResponse       
 
 @{ 
-    Layout = null;
+    Layout = null;       
 }
 
-<!DOCTYPE html>
+<!DOCTYPE html>       
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>RsvpForm</title>
+    <title>RGOSD7 RsvpForm</title>
 </head>
 <body>
     <form asp-action="RsvpForm" method="post">
+        <p>
+            <h1>
+                HOLM-SD Easter Celebration!!!
+            </h1>
+        </p>
         <p>
             <label asp-for="Name">Your Name:</label>
             <input asp-for="Name" />
@@ -29,8 +34,8 @@
             <label>Will you attend?</label>
             <select asp-for="WillAttend">
                 <option value="">Choose an option</option>
-                <option value="true">Yes, I'll be there</option>
-                <option value"false">No, I can't come</option>
+                <option value="true">Yes, I'll be there at the park</option>
+                <option value"false">No, I can't come to the event. Sorry!</option>
             </select>
         </p>
         <button type="submit">Submit RSVP</button>
