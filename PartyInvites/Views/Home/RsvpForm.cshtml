@@ -8,38 +8,78 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <!-- <meta name="viewport" content="width=device-width" /> -->
+    <meta name="viewport" content="width=width=device-width" />
     <title>RGOSD7 RsvpForm</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
 </head>
 <body>
-    <form asp-action="RsvpForm" method="post">
-        <p>
-            <h1>
-                HOLM-SD Easter Celebration!!!
-            </h1>
-        </p>
-        <p>
-            <label asp-for="Name">Your Name:</label>
-            <input asp-for="Name" />
-        </p>
-        <p>
-            <label asp-for="Email">Your Email:</label>
-            <input asp-for="Email" />
-        </p>
-        <p>
-            <label asp-for="Phone">Your Phone:</label>
-            <input asp-for="Phone" />
-        </p>
-        <p>
-            <label>Will you attend?</label>
-            <select asp-for="WillAttend">
-                <option value="">Choose an option</option>
-                <option value="true">Yes, I'll be there at the park</option>
-                <option value"false">No, I can't come to the event. Sorry!</option>
-            </select>
-        </p>
-        <button type="submit">Submit RSVP</button>
+    @*<form asp-action="RsvpForm" method="post">
+            <div asp-validation-summary="All"></div>
+            <p>
+                <h1>
+                    HOLM-SD Easter Celebration!!!
+                </h1>
+            </p>
+            <p>
+                <label asp-for="Name">Your Name:</label>
+                <input asp-for="Name" />
+            </p>
+            <p>
+                <label asp-for="Email">Your Email:</label>
+                <input asp-for="Email" />
+            </p>
+            <p>
+                <label asp-for="Phone">Your Phone:</label>
+                <input asp-for="Phone" />
+            </p>
+            <p>
+                <label>Will you attend?</label>
+                <select asp-for="WillAttend">
+                    <option value="">Choose an option</option>
+                    <option value="true">Yes, I'll be there at the park</option>
+                    <option value"false">No, I can't come to the event. Sorry!</option>
+                </select>
+            </p>
+            <button type="submit">Submit RSVP</button>
 
-    </form>
+        </form>*@
+
+    <div class="panel panel-success">
+        <div class="panel-heading text-center"><h4>HOLM-SD Easter Celebration!!!</h4></div>
+        <div class="panel-body">
+            <form class="p-a-1" asp-action="RsvpForm" method="post">
+                <div asp-validation-summary="All"></div>
+                <div class="form-group">
+                    <label asp-for="Name">Your name:</label>
+                    <input class="form-control" asp-for="Name" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email">Your email:</label>
+                    <input class="form-control" asp-for="Email" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone">Your phone:</label>
+                    <input class="form-control" asp-for="Phone" />
+                </div>
+                <div class="form-group">
+                    <label>Will you attend?</label>
+                    <select class="form-control" asp-for="WillAttend">
+                        <option value="">Choose an option</option>
+                        <option value="true">Yes, I'll be there at the park.</option>
+                        <option value="false">No, I can't come to the event. Sorry!</option>
+                    </select>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary" type="submit">
+                        Submit RSVP
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
 </body>
 </html>

@@ -1,6 +1,6 @@
 ﻿
 @{
-    Layout = null;      
+    Layout = null;
 }
 
 <!DOCTYPE html>
@@ -9,9 +9,10 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Richard Go SD7</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
 </head>
 <body>
-    <div>
+    <div class="text-center">
         <!-- HTTP Get() Function-->
         @*What's in Chris' trunk?<br />
         <b>@ViewBag.ChristSmithCarTrunk</b> <br />
@@ -20,9 +21,11 @@
         <p>
             We're going to have an exciting event at the park.<br />
             <h1>Happy Easter!</h1>
-            <p>Where: Hourglass Park, San Diego, CA 92126</p>
         </p>
-        <a asp-action="RsvpForm">RSVP here!</a>
+
+        <p>Where: Hourglass Park, San Diego, CA 92126</p>
+        @*<a asp-action="RsvpForm">RSVP here!</a>*@
+        <a class="btn btn-primary" asp-action="RsvpForm">RSVP HERE</a>
 
     </div>
 </body>
